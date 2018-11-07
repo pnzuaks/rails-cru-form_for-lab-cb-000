@@ -12,7 +12,6 @@ class ArtistsController < ApplicationController
   def create
     @artist = Artist.new(artist_params(:name, :bio))
     @artist.save
-
     redirect_to artist_path(@artist)
   end
 
@@ -21,7 +20,6 @@ class ArtistsController < ApplicationController
 
   def update
     @artist.update(artist_params(:name, :bio))
-
     redirect_to artist_path(@artist)
   end
 
